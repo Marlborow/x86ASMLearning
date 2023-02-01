@@ -37,10 +37,8 @@ sort_inc:
     mov eax, [j]
     mov ebx, [a_size]
     cmp eax, ebx
-    je inc_i
-    jmp inc_j
-    
-inc_i:
+    jl inc_j
+ 
     mov eax, [i]
     add eax, 1
     mov [j],eax
